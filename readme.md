@@ -108,8 +108,13 @@ At this point you have a decision. **You must choose if you want a single layer 
 
 #### Single layer
 
-Making a single layer keymap is easy enough, start by copying the `test` folder in the keymaps folder and naming it either your moniker or username.
+Making a single layer keymap is easy enough, start by copying the `test` folder in the keymaps folder and naming it either your moniker or name.
 
+![new folder](macropad-workshop/images/new-folder.png)
+
+We'll be modifying the `keymap.c` file. Open your file, and turn your attention to the `KEYMAP_kc()` function. This is where it's kind of up to you what you want to do. Basic keys can be put in easlily enough. You can find a list of all availible basic keys [here.](https://docs.qmk.fm/#/keycodes_basic)
+For this example, we'll make our top three buttons song managment buttons (skip, play/pause, and previous).
+The `KEYMAP_kc` function makes it so we don't need the `kc_` in front of our keymaps, so we'll omit them. Looking at the [list of basic keycodes](https://docs.qmk.fm/#/keycodes_basic) we can use `KC_MPLY, KC_MPRV` and `KC_MNXT`. I
 
 #### Multi-layer
 
