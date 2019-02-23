@@ -1,20 +1,26 @@
+![Final Project](macropad-workshop/images/macropad.jpg)
+
 # Macropad workshop
 
 **This is a work in progress**
 
+NOTES:
+Will follow ->
 Intro and plates > solder > solder and flash test > customize
 
 ## The basics - D1
+
+![layer diagram (From qmk.fm)](macropad-workshop/images/qmks-layer-ascii.PNG)
 
 ## The casing - D1
 
 Before we start on anything else we should start with the casing. Starting by tackling the plate and getting the switches installed. Popping the switches in is easy and shouldn’t take you too long. Just make sure they all face the same direction.
 
-<Switch picture>
+![switches](macropad-workshop/images/switches.jpg)
 
 The plate we’re putting the switches on is 3d printed, so if when you put the switches in they look like the switches do below you will need to clean the hole out. We have sandpaper and x-acto knives for this purpose.
 
-<bad switch picture>
+![bad switches](macropad-workshop/images/switches-bad.jpg)
 
 ## The wiring - D2 & D3
 
@@ -24,11 +30,29 @@ The wiring has 4 parts, soldering the diodes, soldering the wires, soldering the
 
 #### Soldering the diodes
 
+![diode bend](macropad-workshop/images/diodes.jpg)
+
+![diodes soldered](macropad-workshop/images/diodes-on-switch.jpg)
+
 #### Soldering the wires
+
+![rows](macropad-workshop/images/rows.jpg)
+
+![all rows](macropad-workshop/images/rows-more.jpg)
+
+![columns](macropad-workshop/images/columns.jpg)
+
+![columns end](macropad-workshop/images/columns-done.jpg)
 
 #### Soldering the extra stuff
 
+**TODO**
+
 #### Soldering the microcontroller
+
+![Microcontroller pinout](macropad-workshop/images/pighixxx-promicropinout.png)
+
+![Diagram](macropad-workshop/images/circurit.PNG)
 
 ## The firmware - D3
 Now that we have the macropad all wired up it’s time for the firmware to make it do neat things!
@@ -62,7 +86,7 @@ We're done setting up our built environment. ***Now it's time for the real magic
 
 #### Building and flashing the firmware
 
-Now that we're ready start playing with our firmware. First lets build against the test layout. Going back to our msys2 terminal type our build command: `make handwired/tennie:test`
+Now that we're ready start playing with our firmware. First lets build against the test layout so we can see if everything is soldered right. Going back to our msys2 terminal type our build command: `make handwired/tennie:test`
 
 It will build. When it finishes run the `qmk_toolbox.exe` you downloaded earlier. You should see a screen like this.
 
@@ -92,7 +116,11 @@ If it does, congratulations! Your macropad works! You can move on to wrapping up
 
 ## Wrapping up - D3 & D4
 
-Everything is working, but nothing is secured down! We're going to quick change that before we customize the firmware. We need to glue down the reset switch and microcontroller.
+Everything is working, but nothing is secured down! We're going to quick change that before we customize the firmware. We need to glue down the reset switch and microcontroller. You should have something like below.
+
+![split, unclosed](macropad-workshop/images/split-product.jpg)
+
+Now, you just need to curl the wires into the frame, and seal it up with the screws!
 
 ## Customizing - D4
 
