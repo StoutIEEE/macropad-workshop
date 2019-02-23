@@ -28,11 +28,15 @@ This part will take some time. Please be patient and take your time. We will hav
 
 The wiring has 4 parts, soldering the diodes, soldering the wires, soldering the addional stuff, and soldering everything to the microcontroller.
 
+
+**You may want to use this for your reference while soldering the wires and columns**
+![Diagram](images/Circurit.PNG)
+
 #### Soldering the diodes
 
-![diode bend](images/diodes.jpg)
+![diode bend](images/diode.jpg)
 
-![diodes soldered](images/diodes-on-switch.jpg)
+![diodes soldered](images/didoes-on-switch.jpg)
 
 #### Soldering the wires
 
@@ -42,7 +46,7 @@ The wiring has 4 parts, soldering the diodes, soldering the wires, soldering the
 
 ![columns](images/columns.jpg)
 
-![columns end](images/columns-done.jpg)
+![columns end](images/colums-done.jpg)
 
 #### Soldering the extra stuff
 
@@ -50,9 +54,7 @@ The wiring has 4 parts, soldering the diodes, soldering the wires, soldering the
 
 #### Soldering the microcontroller
 
-![Microcontroller pinout](images/pighixxx-promicropinout.png)
-
-![Diagram](images/circurit.PNG)
+![Microcontroller pinout](images/pighixxx-promicropinout.jpg)
 
 ## The firmware - D3
 Now that we have the macropad all wired up it’s time for the firmware to make it do neat things!
