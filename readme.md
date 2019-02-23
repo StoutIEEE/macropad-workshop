@@ -1,5 +1,7 @@
 # Macropad workshop
 
+**This is a work in progress**
+
 Intro and plates > solder > solder and flash test > customize
 
 ## The basics - D1
@@ -104,7 +106,7 @@ You should have a dropdown with folders on the left hand of your screen containi
 
 ![project image](macropad-workshop/images/custom1.PNG)
 
-At this point you have a decision. **You must choose if you want a single layer or multiple layers.** Having multiple layers will allow you to have more keys keybound to a single key and will have more functionality but will be more complicated to set up and remember.
+At this point you have a decision. **You must choose if you want a single layer or multiple layers.** Having multiple layers will allow you to have more keys bound to a single key and will have more functionality but will be more complicated to set up and remember.
 
 #### Single layer
 
@@ -112,8 +114,8 @@ Making a single layer keymap is easy enough, start by copying the `test` folder 
 
 ![new folder](macropad-workshop/images/new-folder.png)
 
-We'll be modifying the `keymap.c` file. Open your file, and turn your attention to the `KEYMAP_kc()` function. This is where it's kind of up to you what you want to do. Basic keys can be put in easlily enough. You can find a list of all availible basic keys [here.](https://docs.qmk.fm/#/keycodes_basic)
-For this example, we'll make our top three buttons song managment buttons (skip, play/pause, and previous).
+We'll be modifying the `keymap.c` file. Open your file, and turn your attention to the `KEYMAP_kc()` function. This is where it's kind of up to you what you want to do. Basic keys can be put in easily enough. You can find a list of all available basic keys [here.](https://docs.qmk.fm/#/keycodes_basic)
+For this example, we'll make our top three buttons song management buttons (skip, play/pause, and previous).
 The `KEYMAP_kc` function makes it so we don't need the `kc_` in front of our keymaps, so we'll omit them. Looking at the [list of basic keycodes](https://docs.qmk.fm/#/keycodes_basic) we can use `KC_MPLY, KC_MPRV` and `KC_MNXT`. I
 
 #### Multi-layer
