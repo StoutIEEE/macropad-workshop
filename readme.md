@@ -1,4 +1,4 @@
-![Final Project](macropad-workshop/images/macropad.jpg)
+![Final Project](images/macropad.jpg)
 
 # Macropad workshop
 
@@ -10,17 +10,17 @@ Intro and plates > solder > solder and flash test > customize
 
 ## The basics - D1
 
-![layer diagram (From qmk.fm)](macropad-workshop/images/qmks-layer-ascii.PNG)
+![layer diagram (From qmk.fm)](images/qmks-layer-ascii.PNG)
 
 ## The casing - D1
 
 Before we start on anything else we should start with the casing. Starting by tackling the plate and getting the switches installed. Popping the switches in is easy and shouldn’t take you too long. Just make sure they all face the same direction.
 
-![switches](macropad-workshop/images/switches.jpg)
+![switches](images/switches.jpg)
 
 The plate we’re putting the switches on is 3d printed, so if when you put the switches in they look like the switches do below you will need to clean the hole out. We have sandpaper and x-acto knives for this purpose.
 
-![bad switches](macropad-workshop/images/switches-bad.jpg)
+![bad switches](images/switches-bad.jpg)
 
 ## The wiring - D2 & D3
 
@@ -30,19 +30,19 @@ The wiring has 4 parts, soldering the diodes, soldering the wires, soldering the
 
 #### Soldering the diodes
 
-![diode bend](macropad-workshop/images/diodes.jpg)
+![diode bend](images/diodes.jpg)
 
-![diodes soldered](macropad-workshop/images/diodes-on-switch.jpg)
+![diodes soldered](images/diodes-on-switch.jpg)
 
 #### Soldering the wires
 
-![rows](macropad-workshop/images/rows.jpg)
+![rows](images/rows.jpg)
 
-![all rows](macropad-workshop/images/rows-more.jpg)
+![all rows](images/rows-more.jpg)
 
-![columns](macropad-workshop/images/columns.jpg)
+![columns](images/columns.jpg)
 
-![columns end](macropad-workshop/images/columns-done.jpg)
+![columns end](images/columns-done.jpg)
 
 #### Soldering the extra stuff
 
@@ -50,9 +50,9 @@ The wiring has 4 parts, soldering the diodes, soldering the wires, soldering the
 
 #### Soldering the microcontroller
 
-![Microcontroller pinout](macropad-workshop/images/pighixxx-promicropinout.png)
+![Microcontroller pinout](images/pighixxx-promicropinout.png)
 
-![Diagram](macropad-workshop/images/circurit.PNG)
+![Diagram](images/circurit.PNG)
 
 ## The firmware - D3
 Now that we have the macropad all wired up it’s time for the firmware to make it do neat things!
@@ -118,7 +118,7 @@ If it does, congratulations! Your macropad works! You can move on to wrapping up
 
 Everything is working, but nothing is secured down! We're going to quick change that before we customize the firmware. We need to glue down the reset switch and microcontroller. You should have something like below.
 
-![split, unclosed](macropad-workshop/images/split-product.jpg)
+![split, unclosed](images/split-product.jpg)
 
 Now, you just need to curl the wires into the frame, and seal it up with the screws!
 
@@ -132,7 +132,7 @@ To start, open your text editor. If you just installed atom, you will have a few
 
 You should have a dropdown with folders on the left hand of your screen containing these two folders.
 
-![project image](macropad-workshop/images/custom1.PNG)
+![project image](images/custom1.PNG)
 
 At this point you have a decision. **You must choose if you want a single layer or multiple layers.** Having multiple layers will allow you to have more keys bound to a single key and will have more functionality but will be more complicated to set up and remember.
 
@@ -140,7 +140,7 @@ At this point you have a decision. **You must choose if you want a single layer 
 
 Making a single layer keymap is easy enough, start by copying the `test` folder in the keymaps folder and naming it either your moniker or name.
 
-![new folder](macropad-workshop/images/new-folder.png)
+![new folder](images/new-folder.png)
 
 We'll be modifying the `keymap.c` file. Open your file, and turn your attention to the `KEYMAP_kc()` function. This is where it's kind of up to you what you want to do. Basic keys can be put in easily enough. You can find a list of all available basic keys [here.](https://docs.qmk.fm/#/keycodes_basic)
 For this example, we'll make our top three buttons song management buttons (skip, play/pause, and previous).
