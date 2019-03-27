@@ -4,26 +4,26 @@
 name=$(uname)
 
 # Linux distro name
-dname=""
-if [name == "Linux"]; then
+dname=''
+if [ $name = 'Linux' ]; then
   dname=$(lsb_release -is)
-if
+fi
 
 
 # Windows or Arch
-if [name == "MSYS_NT-10.0" || dname == "Arch"]; then
+if [ $name = 'MSYS_NT-10.0' ] || [ $dname = 'Arch' ]; then
   pacman -S --noconfirm git
 fi
 # Fedora
-if [dname == "Fedora"]; then
+if [ $dname = 'Fedora' ]; then
   sudo yum install -y git
 fi
 # Debian or Ubuntu
-if [dname == "Debian" || dname == "Ubuntu"]; then
+if [ $dname = 'Debian' ] || [ $dname = 'Ubuntu' ]; then
   sudo apt install -y git
 fi
 # Mac
-if [name == "Darwin"]; then
+if [ $name = 'Darwin' ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install git
 fi
