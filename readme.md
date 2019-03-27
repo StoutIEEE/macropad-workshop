@@ -121,10 +121,14 @@ As mentioned in the beginning we will be using QMK.
 First on the computer you will need to get the firmware and the build tools.
 
 ### Build Environment
-Setting up the build environment differs based on what system you're on. Following the guide [here](https://docs.qmk.fm/#/newbs_getting_started) can get you all set up.
+Setting up the build environment differs based on what system you're on. Following the guide [here](https://docs.qmk.fm/#/newbs_getting_started) can get you all set up. You should download the x86_64 version.
 We'll walk through what the guide says for **Windows** below with screenshots.
 
-If you are on another system, you'll have to figure it our yourself at that link, ***but you're probably already used to that I imagine.***
+If you are on another system, this will be slightly easier.
+
+***Note:*** If you have the windows subsystem you *could* follow the Linux instructions from the bash terminal. You will have to manually flash your board though and I ***HIGHLY*** recommend you don't. Using avrdude is out of the scope of this workshop.
+
+#### Windows:
 
 To start, download msys2. That can be found [here](http://www.msys2.org/). You want to click the middle download button (for x86_64).
 Allow it to install and open it (just leave the last box checked).
@@ -132,28 +136,47 @@ Once it opens paste this command in:
 
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/StoutIEEE/macropad-workshop/master/setup-qmk.sh)"`
 
-It will ask you to say yes a lot. Just type `y` in response. If it **doesn't** ask you a yes or no question, just press enter. At one point it will ask you for administrative privileges, just say yes. *I promise nothing bad will happen.*
+It will ask you to say yes a lot. Just type `y` in response. If it **doesn't** ask you a yes or no question, use your best judgement. We want whatever the default option is or the "all" option for simplicity. A few examples are shown below.
 
-Once the whole process finishes, close the window and relaunch msys2.
+![example1](images/exception-1.PNG)
+
+![example2](images/exception-2.PNG)
+
+At one point it will ask you for administrative privileges, just say yes. *I promise nothing bad will happen.* It needs to install drivers for the AVR and ARM microprocessors.
+
+Once the whole process finishes, close the window and relaunch msys2. This script will prompt you.
 
 Enter this command to get into the source code folder: `cd ~/qmk-firmware/`
 
-Now leave the window as is. We'll come back to it later.
+We're done setting up our built environment. ***Now it's time for the real magic.***
 
-Finally we're going to get a tool to help us flash the firmware. Download [this.](https://github.com/qmk/qmk_toolbox/releases/download/0.0.9/qmk_toolbox.exe)
+#### Linux and Mac:
+
+**Note**: Only Debian, Ubuntu, Fedora, and Arch are supported Linux distros. The script will probably still work if you have git installed.
+
+Open your terminal. For macs this will be in your app launcher or in your apps folder under utils. You could also search for terminal with `CMD+Spacebar`
+
+Paste in this command: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/StoutIEEE/macropad-workshop/master/setup-qmk.sh)"`
+
+This process will vary GREATLY between distros and between Mac and Linux systems. Try to use your best judgment and go with defaults for everything you can.
+
+Once the whole process finishes, close the window and relaunch msys2. This script will prompt you.
+
+Enter this command to get into the source code folder: `cd ~/qmk-firmware/`
 
 We're done setting up our built environment. ***Now it's time for the real magic.***
 
-
 ### Building and flashing the firmware
 
-Now that we're ready start playing with our firmware. First lets build against the test layout so we can see if everything is soldered right. Going back to our msys2 terminal type our build command: `make handwired/tennie:test`
+Now that we're ready start playing with our firmware. First lets build against the test layout so we can see if everything is soldered right. Going back to our terminal type our build command: `make handwired/tennie:test:avrdude`
 
-It will build. When it finishes run the `qmk_toolbox.exe` you downloaded earlier. You should see a screen like this.
+It will build. When it finishes it will prompt you like below.
 
-Click the browse button and find the firmware we just built. If you didn't change the install location for msys2 while installing, you should find it at `C:\msys2\home\<username>\qmk_firmware\handwired_tennie_test.hex` where `<username>` is your Windows username (probably Student).
+![avrdude prompt](images/avrdude.PNG)
 
-<Im not sure how this goes. Finish this>
+Press the pushbutton we soldered to ground and reset. It should find your keypad and will start flashing it. When it finishes you should see something like this. If you don't call over one of the workshop helpers.
+
+![finished](images/happy-avr.PNG)
 
 Now your firmware should be ready to go. Test your keyboard by opening something you can type into. Your keys should match what's below.
 ```
@@ -206,11 +229,40 @@ Making a single layer keymap is easy enough, start by copying the `test` folder 
 You'll notice there are 3 files in this folder. We'll start by modifying the `keymap.c` file. Open your file, and turn your attention to the `KEYMAP_kc()` function. This is where you will put the key bindings you want. Basic keys can be put in easily enough. You can find a list of all available basic keys [here.](https://docs.qmk.fm/#/keycodes_basic)
 
 For this example, we'll make our top three buttons song management buttons (skip, play/pause, and previous). Feel free to use whatever keys you would like, I highly recommend looking at the list before continuing.
-The `KEYMAP_kc` function makes it so we don't need the `kc_` in front of our keymaps, so we'll omit them. Looking at the [list of basic keycodes](https://docs.qmk.fm/#/keycodes_basic) we can use `KC_MPLY, KC_MPRV` and `KC_MNXT` for play/pause, previous, and next respectivly. You may have noticed that there are also longer names like `KC_MEDIA_NEXT_TRACK` for `KC_MNXT`. Though you could use these longer names, I recommend against it. The shorter 4 character names layer will fit the little ascii version of the macropad, and it will likely be more readable as a result. I won't stop you if you would perfer less archaic variable names!
+The `KEYMAP_kc` function makes it so we don't need the `kc_` in front of our keymaps, so we'll omit them. Looking at the [list of basic keycodes](https://docs.qmk.fm/#/keycodes_basic) we can use `KC_MPLY, KC_MPRV` and `KC_MNXT` for play/pause, previous, and next respectivly. You may have noticed that there are also longer names like `KC_MEDIA_NEXT_TRACK` for `KC_MNXT`. Though you could use these longer names, I recommend you don't. The shorter 4 character names layer will fit the little ascii drawing version of the macropad, and it will likely be more readable as a result. I won't stop you if you would prefer less archaic variable names!
 
 If you are following my example, after replacing the top 3 buttons, you should have a key map similar to this.
 
-![layer1 keymap start](images/layer1-1.PNG)
+```
+#include QMK_KEYBOARD_H
+
+// Custom keycode definitions, and keycode renames
+#define KC_oooo KC_TRNS
+#define KC_XXXX KC_NO
+
+// Layer names
+#define base  0
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+  // LAYOUT_kc() allows you to ommit the KC_ in front of a keycode.
+  // If you want to use 'KC_', use LAYOUT() instead
+  [base] = LAYOUT_kc(
+  //         ┌────────┬────────┬────────┐
+
+                MPRV  ,  MPLY  ,  MNXT  ,
+
+  //    ├────────┼────────┼────────┼────────┼
+
+            4    ,   5    ,    6   ,    7   ,
+
+  //    ├────────┼────────┼────────┼────────┼
+
+                  8   ,    9   ,    0
+
+  //         └────────┴────────┴────────┘
+  ),
+};
+```
 
 Now, maybe you also want a key that presses a few keys down at once, like `ALT+F4` or `CTRL+ALT+DELETE`. We will go over that next. For reference you may want to look over [the list of functions](https://docs.qmk.fm/#/feature_advanced_keycodes) you can use. There are a lot of interesting features you can use to make the keyboard do what you want. We'll keep it simple and just use the [modifier keys section.](https://docs.qmk.fm/#/feature_advanced_keycodes?id=modifier-keys). Lets make out bottom keys copy, cut, and paste. Looking at the list of modifier key function, we want to use `LALT(kc)`, so we would need `LALT(KC_C)` `LALT(KC_X)` and `KC_V` for copy, cut, and paste respectivly. These will work, but we want to keep our names at 4 characters! To make them like the simple keycodes we need to make a macro. To do that we write something like this `#define KC_ACPY LALT(KC_C)` at the top of our `keymap.c` file where `KC_ACPY` is our ***unique*** keycode name starting with `KC_` and `LATL(KC_C)` is what we want the keycode to be or do (for this example left alt + C). Doing it for all three we get something like below.
 
