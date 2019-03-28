@@ -4,7 +4,7 @@ Multi-layered set ups are a bit more difficult but much more fun to program and 
 
  To make a multi-layered keymap lets start by copying a template. The `default` keymap should be used. Copy the folder and rename it to your name or online moniker.
 
-![new folder](images/duplicate-default.PNG)
+![new folder](images/duplicate-default.png)
 
 ![naming](images/duplicate.PNG)
 
