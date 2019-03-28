@@ -15,7 +15,7 @@ You should have a dropdown with folders on the left hand of your screen containi
 
 ![project image](images/custom1.PNG)
 
-At this point you have a decision. **You must choose if you want a single layer or multiple layers.** Having multiple layers will allow you to have more keys bound to a single key and will have more functionality but will be more complicated to set up and remember.
+At this point you have a decision. **You must choose if you want a single layer or multiple layers.** Having multiple layers will allow you to have more keys bound to a single key and will have more functionality but will be more complicated to set up and remember. I ***strongly*** recommend going with the single layer unless you feel comfortable with C or C++ and are willing to get into the documentation weeds and figure some things out.
 
 + [Directions for single layer](single-layer.md)
 + [Directions for multiple layers](multi-layer.md)
