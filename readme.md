@@ -8,7 +8,7 @@ A BOM, the circuit, and casing files can be found here as well as instructions t
 
 ### Instructions
 
-1. [Start](start,md)
+1. [Start](start.md)
 2. [Prep](prep.md)
 3. [soldering](soldering.md)
 4. [Testing and build wrap up](test-wrapup.md)
