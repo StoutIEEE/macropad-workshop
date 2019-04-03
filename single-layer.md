@@ -1,6 +1,6 @@
 # Single layer
 
-Making a single layer keymap is easy enough, start by copying the `test` folder in the keymaps folder and naming it either your moniker or name.
+Making a single layer keymap is easy enough, start by copying the `simple-numbpad` folder in the keymaps folder and naming it either your moniker or name.
 
 ![new folder](images/duplicate-test.png)
 

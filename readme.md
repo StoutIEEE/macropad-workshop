@@ -6,7 +6,7 @@ This is the repo for everything related to the IEEE macropad workshop (aside fro
 
 A BOM, the circuit, and casing files can be found here as well as instructions to build.
 
-### Instructions
+## Instructions
 
 1. [Start](start.md)
 2. [Prep](prep.md)
@@ -17,3 +17,26 @@ A BOM, the circuit, and casing files can be found here as well as instructions t
   * [Multi layer](multi-layer.nd)
   * [Compiling](compiling.md)
 6. [End](end.md)
+
+
+## Special thanks to...
+
+##### Professor Steven Heidtke
+ + Helping us CNC mill our base parts
+ + Spending ***a lot of time*** with us to get the milling code working
+
+##### Fryklund Lab 101
+ + Providing us a big scary CNC machine to make parts with
+
+##### Melissa @ PimpMyKeyboard
+ + Helping us get our keycaps in order
+
+##### Will @ SwitchTOP
+ + Helping us get our keyswitches in order
+
+##### IEEE Twin Cities
+ + Helping us out with funding for the workshop
+
+##### Stout Student Association
+ + Helping us out with funding for the workshop
+ + Putting up with our shenanigan
