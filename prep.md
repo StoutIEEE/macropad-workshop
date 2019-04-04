@@ -55,6 +55,6 @@ This process will vary GREATLY between distros and between Mac and Linux systems
 
 Once the whole process finishes, close the window and relaunch your terminal. This script will prompt you.
 
-Enter this command to get into the source code folder: `cd ~/qmk-firmware/`
+Enter this command to get into the source code folder: `cd ~/qmk_firmware/`
 
 We're done setting up our built environment. [***Now it's time for the real magic.***](soldering.md)
