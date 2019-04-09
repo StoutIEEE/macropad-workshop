@@ -79,7 +79,10 @@ Here's an annotated photo as well to help further drive home which pin to solder
 
 Solder the wires to the documented pins. You will want to chop off the extra wire you don't need so the wires will fold into the base better when we close it up. For measuring the length you need to save, put the plate above the frame, and measure to the microcontroller footprint in the base. It will also be helpful to pop the microcontroller into it's footprint so you can look at pins too.
 
-![trimming wires](images/wire-trimming.jpg)
+![hole for reset switch and micro](images/positioning.JPG)
+
+
+![hole for reset switch and micro](images/microcontroller.JPG)
 
 After the rows and columns are soldered, you have all you ***need*** for your macropad to function. We're going to solder an extra thing to make our life easier.
 
@@ -87,13 +90,15 @@ After the rows and columns are soldered, you have all you ***need*** for your ma
 
 Now we need to solder the reset switch so we can program the macropad! We don't *necessarily* need it, but it will make programming it easier. Below is an image of where the reset switch will be glued down. (Button in the hole so we can press it without opening the case)
 
-![hole for reset switch and micro](images/hole-for-reset.jpg)
+![hole for reset switch and micro](images/positioning.JPG)
 
 Using this information, cut a bit of your unused wire colors to size.
 
+![](images/soldered-switch.JPG)
+
 Solder them to the RESET and GND pins on the right side of the board. A picture of a finished board is below.
 
-![finished reset switch and board](images/finished-reset.jpg)
+![finished reset switch and board](images/finished.JPG)
 
 After you solder that, you're all done with soldering for this workshop!
 
