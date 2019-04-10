@@ -1,6 +1,6 @@
 # Testing and wrapping up the building
 
-Now that we're ready start playing with our firmware, we need to first test and make sure everything works. Lets start by building against the test layout so we can see if everything is soldered right. Open your terminal and enter `cd ~/qmk-firmware/` in terminal followed by our build command: `make handwired/tennie:simple-numpad:avrdude`
+Now that we're ready start playing with our firmware, we need to first test and make sure everything works. Lets start by building against the test layout so we can see if everything is soldered right. Open your terminal and enter `cd ~/qmk-firmware/` in terminal followed by our build command: `make handwired/tennie:simple-numbpad:avrdude`
 
 It will build. When it finishes it will prompt you like below.
 
