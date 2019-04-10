@@ -39,7 +39,7 @@ At one point it will ask you for administrative privileges, just say yes. *I pro
 
 Once the whole process finishes, close the window and relaunch msys2. This script will prompt you.
 
-Enter this command to get into the source code folder: `cd ~/qmk-firmware/`
+Enter this command to get into the source code folder: `cd ~/qmk_firmware/`
 
 We're done setting up our built environment. [***Now it's time for the real magic.***](soldering.md)
 
