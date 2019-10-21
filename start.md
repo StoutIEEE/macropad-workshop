@@ -34,7 +34,7 @@ We have all of these for the workshop in bins, so feel free to take a look at th
 
 ### On the subject of software
 
-For this workshop, we are using the open-source keyboard firmware QMK. It has a lot of neat features and convenience scripts to keep the layman out of the lower level C and assembly weeds. Many DIY keyboards use this firmware such as the Plank, or Ergodox keyboards. One of it's neat features is it's layer system. Below you can see a diagram of it from their wiki:
+For this workshop, we are using the open-source keyboard firmware QMK. It has a lot of neat features and convenience scripts to keep the layman out of the lower level C and assembly weeds. Many DIY keyboards use this firmware such as the Plank, or Ergodox keyboards. One of its neat features is its layer system. Below you can see a diagram of it from their wiki:
 
 ![layer diagram (From qmk.fm)](images/qmks-layer-ascii.PNG)
 
