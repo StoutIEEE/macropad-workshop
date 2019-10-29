@@ -2,11 +2,11 @@
 
 ## The casing
 
-Before we start on anything else we should start with the casing. Starting by tackling the plate and getting the switches installed. Popping the switches in is easy and shouldn’t take you too long. Just make sure they all face the same direction.
+Before we start on anything else we should start with the casing. Start by getting the switches installed in the plate. Popping the switches in is easy and shouldn’t take you too long. Make sure all switches face the same direction. The photo below is shot from the long side of the plate. The correct orientation for the switch is as shown. The holes in the cut out portion of the switches should be parallel with the long sides.
 
 ![switches](images/switches.jpg)
 
-The plate we’re putting the switches on is 3d printed, so if when you put the switches in they look like the switches do below you will need to clean the hole out. We have sandpaper and x-acto knives for this purpose.
+The plate we’re putting the switches on is 3d printed, so if when you put the switches in they look like the switches do below you will need to clean the hole out. We have sandpaper and x-acto knives for this purpose. Make sure to not remove too much from the plate. The switches should have a snug fit.
 
 ![bad switches](images/switches-bad.jpg)
 
