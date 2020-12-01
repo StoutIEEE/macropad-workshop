@@ -12,7 +12,7 @@ A BOM, the circuit, and casing files can be found here as well as instructions t
 2. [Prep](prep.md)
 3. [soldering](soldering.md)
 4. [Testing and build wrap up](test-wrapup.md)
-5. [Programing](programing.md)
+5. [Programming](programming.md)
   * [Single layer](single-layer.md)
   * [Multi layer](multi-layer.nd)
   * [Compiling](compiling.md)
